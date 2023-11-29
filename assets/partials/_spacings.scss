@@ -1,0 +1,29 @@
+$sp-sizes: (
+  sm: 5px,
+  normal: 10px,
+  md: 30px,
+  lg: 60px,
+  xlg: 100px,
+  xxlg: 150px,
+);
+
+@each $key, $val in $sp-sizes {
+  .padding-#{$key} {
+    padding: $val;
+  }
+  .padding-block-#{$key} {
+    padding-block: $val;
+  }
+  .padding-inline-#{$key} {
+    padding-inline: $val;
+  }
+  .margin-#{$key} {
+    margin: $val;
+  }
+  .margin-block-#{$key} {
+    margin-block: $val;
+  }
+  .margin-inline-#{$key} {
+    margin-inline: $val;
+  }
+}

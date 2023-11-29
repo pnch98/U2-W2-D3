@@ -1,0 +1,20 @@
+@mixin fadeIn($duration: 1s, $delay: 1s) {
+  animation: fade $duration $delay both;
+}
+
+@for $i from 1 through 6 {
+  .fadeIn-#{$i} {
+    @include fadeIn(500ms, #{$i}s);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,22 @@
+@import "./partials/reset";
+@import "./partials/colors";
+@import "./partials/font";
+@import "./partials/spacings";
+@import "./partials/buttons";
+@import "./partials/mixins";
+@import "./partials/animations";
+
+body {
+  margin: 0;
+  font-family: $main-font;
+}
+.hero {
+  background-color: $bg-hero;
+  color: #ebebeb;
+}
+.my-shadow {
+  @include floating();
+}
+.my-shadow-card {
+  @include floating(none, 8px, 3px 3px 4px 4px rgba(0, 0, 0, 0.491));
+}
